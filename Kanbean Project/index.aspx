@@ -40,6 +40,7 @@
             <tr>
                 <td class="board-content" id="product-backlog">
                     <div class="tasks">TASK</div>
+
                 </td>
                 <td class="board-content" id="sprint-backlog"></td>
                 <td class="board-content" id="to-do"></td>
