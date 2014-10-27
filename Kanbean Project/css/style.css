@@ -20,7 +20,7 @@
 #logo {
     padding:15px;
     font-family:'Lucida Console';
-    font-size:20px;
+    font-size:1.2em;
     font-weight:bold;
     float:left;
     width:100px;
@@ -39,37 +39,35 @@
 
 #toolbar {
     width:100%;
-    height:30px;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    background-color:#333;
-    padding:5px;
-
+    background-color:black;
 }
 
 .icon {
-    width:30px;
-    height:30px;
     display:inline-block;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
     color: white;
-    font-size: 20px;
-    padding-right: 0.5em;
+    font-size: 1.5em;
+    padding:0.4em 0em 0.4em 0.8em;
+    vertical-align:middle;
 }
 
-#add-button:before {
-    content:'\f055';
+#logo:hover, .icon:hover {
+    color:deepskyblue;
 }
 
-#search-button:before {
-    content:'\f00e';
+#btnAdd:before {
+    content:"\f055";
 }
 
-#filter-button:before {
-    content:'\f0b0';
+#btnSearch:before {
+    content:"\f00e";
+}
+
+#btnFilter:before {
+    content:"\f0b0";
 }
 
 #kanbanboard {
@@ -79,15 +77,17 @@
 }
 
 .board-header {
-    background-color:#808080;
+    background-color:black;
+    color:#eeeeee;
+    font-size:1.2em;
 }
 
 .board-content {
-    background-color:whitesmoke;
+    background-color:#eeeeee;
     width:20%;
 }
 
-.tasks {
+.backlog-content {
     background-color:#FFFFA0;
     border: 1px solid #FFCC66;
     margin:5px 5px 10px 5px;
@@ -95,6 +95,24 @@
     clear:both;
 }
 
+.tasks {
+    background-color:snow;
+    border: 1px solid #b2b2b2;
+    margin:5px 5px 10px 35px;
+    padding:5px;
+    clear:both;
+}
 #add-button:hover, #search-button:hover, #filter-button:hover, .tasks:hover {
     cursor:pointer;
+}
+
+.popupbackground {
+    background-color:gray;
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+}
+ 
+.popupmodal {
+    background-color:white;
+    padding:10px;
 }
