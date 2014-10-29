@@ -10,7 +10,7 @@
 namespace Kanbean_Project {
     
     
-    public partial class index {
+    public partial class board {
         
         /// <summary>
         /// lanbanboard control.
