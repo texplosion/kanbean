@@ -130,12 +130,72 @@
     width:20%;
 }
 
-.backlog-content {
+.backlog {
     background-color:#FFFFA0;
     border: 1px solid #FFCC66;
     margin:0.3em 0.3em 0.6em 0.3em;
-    padding:0.3em;
     clear:both;
+}
+
+.backlog-header {
+    background-color:#ffff60;
+}
+
+.lblComplexity {
+    font-weight:bold;
+    font-size: 1.3em;
+    margin-left:0.4em;
+    display:inline-block;
+}
+
+.backlogIcon {
+    display:inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: gray;
+    font-size: 1.1em;
+    margin:0.2em 0.5em 0.2em 0em;
+    float:right;
+    vertical-align:middle;
+}
+
+.iconEdit:before {
+    content: "\f040";
+}
+
+.iconDelete:before {
+    content: "\f00d";
+}
+
+.backlog-content {
+    font-size:1.3em;
+    padding: 0.4em;
+}
+
+.backlog-title {
+    text-decoration:none;
+    color:black;
+    text-align:justify;
+}
+
+.backlog-footer {
+    padding:0.2em;
+}
+
+.lblDueDate {
+    font-size: 1.1em;
+    margin-left:0.2em;
+}
+
+.iconTask:before {
+    font-size: 1.1em;
+    content:  "\f00b";
+}
+
+.iconEdit:hover, .iconDelete:hover, .iconTask:hover {
+    color: black;
 }
 
 .tasks {

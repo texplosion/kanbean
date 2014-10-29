@@ -40,17 +40,22 @@
             </tr>
             <tr>
                 <td class="board-content" id="product-backlog">
-                    <div class="backlogs" draggable="true">
-                        <div class="backlog-content">Backlog 1</div>
-                        <div class="tasks" draggable="true">task 1</div>
-                        <div class="tasks" draggable="true">task 2</div>
-                        <div class="tasks" draggable="true">task 3</div>
-                    </div>
-                    <div class="backlogs">
-                        <div class="backlog-content">Backlog 2</div>
-                        <div class="tasks">task 1</div>
-                        <div class="tasks">task 2</div>
-                        <div class="tasks">task 3</div>
+                    <div class="backlogArea">
+                        <div class="backlog">
+                            <div class="backlog-header">
+                                <asp:Label class="lblComplexity" runat="server" Text="3" ToolTip="Complexity"></asp:Label>
+                                <asp:LinkButton runat="server" class="backlogIcon iconDelete" title="Delete the backlog"></asp:LinkButton>
+                                <asp:LinkButton runat="server" class="backlogIcon iconEdit" title="Edit the backlog"></asp:LinkButton>
+                            </div>
+                            <div class="backlog-content" title="View the backlog">
+                                <asp:LinkButton CssClass="backlog-title" runat="server">Board UI - As Customer I need a 5-swimlane-kanbanboard, so that I can manage my project efficiently</asp:LinkButton>
+                            </div>
+                            <div class="backlog-footer">
+                                <asp:Label class="lblDueDate" runat="server" Text="30.10.2014" ToolTip="Due Date"></asp:Label>
+                                <asp:LinkButton runat="server" class="backlogIcon iconTask" title="Show the tasks">&nbsp;4</asp:LinkButton>
+                            </div>
+                        </div>
+                        <!--<div class="tasks">task 1</div>-->
                     </div>
                 </td>
                 <td class="board-content" id="sprint-backlog"></td>
@@ -80,7 +85,7 @@
                                         <asp:TextBox ID="DescriptionTextBox" runat="server" TextMode="MultiLine" Columns="40" Rows="12"></asp:TextBox></p>
                                     </td>
                                     <td style="vertical-align:bottom;padding:0em 0.5em 1.3em 1em">
-                                        <label>Line</label><br />
+                                        <label>Column</label><br />
                                         <asp:DropDownList runat="server" ID="lineDropDownList" Width="160">
                                             <asp:ListItem Text="Product Backlog" Value="product-backlog"></asp:ListItem>
                                             <asp:ListItem Text="Sprint Backlog" Value="sprint-backlog"></asp:ListItem>
