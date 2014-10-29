@@ -4,6 +4,49 @@
     font-family:Calibri;
 }
 
+/*Register and login form*/
+#registerForm {
+    width:33.2em;
+    background-color:deepskyblue;
+    padding:1.2em;
+    margin:1.2em auto;
+}
+
+#registerFormTitle {
+    color:whitesmoke;
+    text-align:center;
+    margin:0em 0em 0.6em 0em;
+    font-size:2.5em;
+}
+
+#RegisterPanel {
+    width:28em;
+    background-color:whitesmoke;
+    margin:0 auto;
+    font-size:1.1em;
+    padding:1.2em;
+}
+
+.registerLabel {
+    vertical-align:bottom;
+}
+
+.validatorField {
+    color:red;
+    font-size:0.8em;
+}
+
+#usernameTextBox, #passwordTextBox, #passwordconfirmTextBox, #emailTextBox {
+    width:18em;
+    height:1.4em;
+    margin-left:0.6em;
+}
+#btnRegiterField {
+    text-align:right;
+    padding-top:1.2em;
+}
+
+/*board*/
 #lanbanboard {
     width:100%;
 }
@@ -14,27 +57,27 @@
 
 #header {
     width:100%;
-    height:50px;
+    height:3.1em;
 }
 
 #logo {
-    padding:15px;
+    padding:1em;
     font-family:'Lucida Console';
     font-size:1.2em;
     font-weight:bold;
     float:left;
-    width:100px;
+    width:6.2em;
     vertical-align:middle;
 }
 
 #user-information {
     float:right;
     padding:15px;
-    width:200px;
+    width:12.5em;
 }
 
 #projectDropDownList {
-    width:100px;
+    width:6.2em;
 }
 
 #toolbar {
@@ -72,7 +115,7 @@
 
 #kanbanboard {
     width:100%;
-    margin-top:15px;
+    margin-top:1em;
     border-collapse:collapse;
 }
 
@@ -90,16 +133,16 @@
 .backlog-content {
     background-color:#FFFFA0;
     border: 1px solid #FFCC66;
-    margin:5px 5px 10px 5px;
-    padding:5px;
+    margin:0.3em 0.3em 0.6em 0.3em;
+    padding:0.3em;
     clear:both;
 }
 
 .tasks {
     background-color:snow;
     border: 1px solid #b2b2b2;
-    margin:5px 5px 10px 35px;
-    padding:5px;
+    margin:0.3em 0.3em 0.6em 2.2em;
+    padding:0.3em;
     clear:both;
 }
 #add-button:hover, #search-button:hover, #filter-button:hover, .tasks:hover {
@@ -114,5 +157,5 @@
  
 .popupmodal {
     background-color:white;
-    padding:10px;
+    padding:0.6em;
 }

@@ -7,7 +7,6 @@
     <title>Lanban</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
-
 </head>
 <body>
     <form id="lanbanboard" runat="server">
@@ -64,7 +63,7 @@
         <div class="clear"></div>
 
         <ajaxToolkit:ToolkitScriptManager ID="addBacklogToolkitscript" runat="server" ></ajaxToolkit:ToolkitScriptManager>
-        <asp:UpdatePanel ID="updpanel" runat="server">
+        <asp:UpdatePanel ID="addBacklogUpdatePanel" runat="server">
             <ContentTemplate>
                 <ajaxToolkit:ModalPopupExtender ID="addBacklogPopup" runat="server" TargetControlID="addBacklogHiddenField" PopupControlID="addBacklogPanel" CancelControlID="btnCancel" BackgroundCssClass="popupbackground"></ajaxToolkit:ModalPopupExtender>
                 <asp:HiddenField ID="addBacklogHiddenField" runat="server" />
