@@ -86,7 +86,7 @@
   <ItemGroup>
     <Content Include="board.aspx" />
     <Content Include="css\style.css" />
-    <Content Include="database\LanbanDatabase.accdb" />
+    <Content Include="App_Data\LanbanDatabase.accdb" />
     <Content Include="login.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="Web.config" />

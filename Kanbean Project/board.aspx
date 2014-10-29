@@ -111,7 +111,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />&nbsp;or&nbsp;
+                                        <asp:Button ID="btnAddBacklog" runat="server" Text="Save" OnClick="btnAddBacklog_Click" />&nbsp;or&nbsp;
                                         <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
                                     </td>
                                 </tr>
