@@ -141,11 +141,13 @@
     background-color:#ffff60;
 }
 
-.lblComplexity {
+.btnComplexity {
     font-weight:bold;
     font-size: 1.3em;
     margin-left:0.4em;
     display:inline-block;
+    text-decoration:none;
+    color:black;
 }
 
 .backlogIcon {
@@ -170,7 +172,7 @@
 }
 
 .backlog-content {
-    font-size:1.3em;
+    font-size:1.1em;
     padding: 0.4em;
 }
 
@@ -184,13 +186,15 @@
     padding:0.2em;
 }
 
-.lblDueDate {
-    font-size: 1.1em;
+.btnDueDate {
+    font-size: 1em;
     margin-left:0.2em;
+    text-decoration:none;
+    color:black;
 }
 
 .iconTask:before {
-    font-size: 1.1em;
+    font-size: 1em;
     content:  "\f00b";
 }
 

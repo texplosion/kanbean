@@ -22,6 +22,24 @@ namespace Kanbean_Project {
         protected global::System.Web.UI.HtmlControls.HtmlForm lanbanboard;
         
         /// <summary>
+        /// lanbanScriptManager control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ToolkitScriptManager lanbanScriptManager;
+        
+        /// <summary>
+        /// updatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel;
+        
+        /// <summary>
         /// projectDropDownList control.
         /// </summary>
         /// <remarks>
@@ -58,22 +76,121 @@ namespace Kanbean_Project {
         protected global::System.Web.UI.WebControls.LinkButton btnFilter;
         
         /// <summary>
-        /// addBacklogToolkitscript control.
+        /// kanbanboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager addBacklogToolkitscript;
+        protected global::System.Web.UI.WebControls.Table kanbanboard;
         
         /// <summary>
-        /// addBacklogUpdatePanel control.
+        /// productBacklog control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel addBacklogUpdatePanel;
+        protected global::System.Web.UI.WebControls.TableCell productBacklog;
+        
+        /// <summary>
+        /// backlogComplexity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton backlogComplexity;
+        
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnDelete;
+        
+        /// <summary>
+        /// btnEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnEdit;
+        
+        /// <summary>
+        /// backlogTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton backlogTitle;
+        
+        /// <summary>
+        /// btnDueDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnDueDate;
+        
+        /// <summary>
+        /// btnTask control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnTask;
+        
+        /// <summary>
+        /// sprintBacklog control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell sprintBacklog;
+        
+        /// <summary>
+        /// toDo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell toDo;
+        
+        /// <summary>
+        /// workInProcess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell workInProcess;
+        
+        /// <summary>
+        /// done control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell done;
+        
+        /// <summary>
+        /// lblTest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTest;
         
         /// <summary>
         /// addBacklogPopup control.
@@ -121,22 +238,22 @@ namespace Kanbean_Project {
         protected global::System.Web.UI.WebControls.TextBox titleTextBox;
         
         /// <summary>
-        /// DescriptionTextBox control.
+        /// descriptionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DescriptionTextBox;
+        protected global::System.Web.UI.WebControls.TextBox descriptionTextBox;
         
         /// <summary>
-        /// lineDropDownList control.
+        /// swimlaneDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList lineDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList swimlaneDropDownList;
         
         /// <summary>
         /// assigneeDropDownList control.

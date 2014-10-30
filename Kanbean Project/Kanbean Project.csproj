@@ -84,9 +84,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LanbanDatabase.mdb" />
     <Content Include="board.aspx" />
     <Content Include="css\style.css" />
-    <Content Include="App_Data\LanbanDatabase.accdb" />
     <Content Include="login.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="Web.config" />
