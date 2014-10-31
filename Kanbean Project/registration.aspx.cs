@@ -34,13 +34,19 @@ namespace Kanbean_Project
             if (this.IsValid) {
                 resultLabel.Text = "Information is submitted.";
                 registerFormPopup.Show();
+                Response.Redirect("login.aspx");
             }
             else
             {
                 resultLabel.Text = "Check information again.";
                 registerFormPopup.Show();
             }
-                
+            
+        }
+
+        protected void btnOK_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -12,6 +12,12 @@ namespace Kanbean_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("board.aspx");
         }
     }
 }

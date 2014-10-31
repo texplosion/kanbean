@@ -4,10 +4,35 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Lanban</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+        <form id="loginForm" runat="server">
+        <h1 class="formTitle">Lanban board</h1>
+        <asp:Panel ID="loginPanel" runat="server" GroupingText="Login">
+            <table>
+                <tr>
+                    <td class="registerLabel">Username</td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="usernameRequiredFieldValidator" runat="server" ErrorMessage="* Please enter your username" ControlToValidate="usernameTextBox" EnableClientScript="False" CssClass="validatorField" Font-Italic="True"></asp:RequiredFieldValidator><br />
+                        <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="registerLabel">Password</td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="passwordRequiredFieldValidator" runat="server" ErrorMessage="* Please enter your password" ControlToValidate="passwordTextBox" EnableClientScript="False" CssClass="validatorField" Font-Italic="True"></asp:RequiredFieldValidator><br />
+                        <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="btnRegiterField">
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" Width="80px" Height="30px" />
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
     </form>
 </body>
 </html>

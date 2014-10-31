@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="registerForm" runat="server">
-        <h1 id="registerFormTitle">Lanban board</h1>
+        <h1 class="formTitle">Lanban board</h1>
         <asp:Panel ID="RegisterPanel" runat="server" GroupingText="User Registration">
             <table id="registerTable">
                 <tr>
@@ -59,7 +59,7 @@
                 <asp:Panel ID="registerFormPanel" runat="server" CssClass="popupmodal">
                     <fieldset>
                         <asp:Label ID="resultLabel" runat="server" Text=""></asp:Label><br />
-                        <asp:Button ID="btnOK" runat="server" Text="OK" />
+                        <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />
                     </fieldset>
                 </asp:Panel>
             </ContentTemplate>
