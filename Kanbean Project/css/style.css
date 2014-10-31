@@ -119,6 +119,10 @@
     border-collapse:collapse;
 }
 
+td {
+    vertical-align:top;
+}
+
 .board-header {
     background-color:black;
     color:#eeeeee;
@@ -129,16 +133,13 @@
     background-color:#eeeeee;
     width:20%;
 }
-
 .backlog {
-    background-color:#FFFFA0;
-    border: 1px solid #FFCC66;
-    margin:0.3em 0.3em 0.6em 0.3em;
+    margin:0.3em;
     clear:both;
 }
 
 .backlog-header {
-    background-color:#ffff60;
+    height:1.6em;
 }
 
 .btnComplexity {
@@ -222,4 +223,8 @@
 .popupmodal {
     background-color:white;
     padding:0.6em;
+}
+
+#btnRefresh {
+    visibility:hidden;
 }

@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="board.aspx.cs" Inherits="Kanbean_Project.board" %>
+<%@ Register Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" tagPrefix="ajax" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +12,7 @@
 <body>
     <form id="lanbanboard" runat="server">
         <ajaxToolkit:ToolkitScriptManager ID="lanbanScriptManager" runat="server" ></ajaxToolkit:ToolkitScriptManager>
-        <asp:UpdatePanel ID="updatePanel" runat="server">
+        <asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <div id="header">
                     <div id="logo" title="Lanban">
@@ -42,25 +43,7 @@
                         <asp:TableHeaderCell CssClass="board-header">Done</asp:TableHeaderCell>
                     </asp:TableRow>
                     <asp:TableRow>
-                        <asp:TableCell CssClass="board-content" ID="productBacklog">
-                            <asp:Panel CssClass="backlogArea" runat="server">
-                                <asp:Panel CssClass="backlog" runat="server">
-                                    <asp:Panel CssClass="backlog-header" runat="server">
-                                        <asp:LinkButton class="btnComplexity" ID="backlogComplexity" runat="server" Text="3" ToolTip="Complexity" OnClick="btnComplexity_Click"></asp:LinkButton>
-                                        <asp:LinkButton runat="server" ID="btnDelete" class="backlogIcon iconDelete" ToolTip="Delete the backlog" OnClick="btnDelete_Click"></asp:LinkButton>
-                                        <asp:LinkButton runat="server" ID="btnEdit" class="backlogIcon iconEdit" ToolTip="Edit the backlog" OnClick="btnEdit_Click"></asp:LinkButton>
-                                    </asp:Panel>
-                                    <asp:Panel CssClass="backlog-content" ToolTip="View the backlog" runat="server">
-                                        <asp:LinkButton CssClass="backlog-title" ID="backlogTitle" runat="server" OnClick="backlogTitle_Click">Board UI - As Customer I need a 5-swimlane-kanbanboard, so that I can manage my project efficiently</asp:LinkButton>
-                                    </asp:Panel>
-                                    <asp:Panel CssClass="backlog-footer" runat="server">
-                                        <asp:LinkButton class="btnDueDate" ID="btnDueDate" runat="server" Text="30.10.2014" ToolTip="Due Date" OnClick="btnDueDate_Click"></asp:LinkButton>
-                                        <asp:LinkButton runat="server" class="backlogIcon iconTask" ID="btnTask" ToolTip="Show the tasks" Text=" 4" OnClick="btnTask_Click"></asp:LinkButton>
-                                    </asp:Panel>
-                                </asp:Panel>
-                                <!--<asp:Panel CssClass="tasks" runat="server">Task 1</asp:Panel>-->
-                            </asp:Panel>
-                        </asp:TableCell>
+                        <asp:TableCell CssClass="board-content" ID="productBacklog"></asp:TableCell>
                         <asp:TableCell CssClass="board-content" ID="sprintBacklog"></asp:TableCell>
                         <asp:TableCell CssClass="board-content" ID="toDo"></asp:TableCell>
                         <asp:TableCell CssClass="board-content" ID="workInProcess"></asp:TableCell>
@@ -68,11 +51,9 @@
                     </asp:TableRow>
                 </asp:Table>
 
-                <asp:Label ID="lblTest" runat="server" Text="Label"></asp:Label>
-
                 <div class="clear"></div>
 
-                <ajaxToolkit:ModalPopupExtender ID="addBacklogPopup" runat="server" TargetControlID="addBacklogHiddenField" PopupControlID="addBacklogPanel" CancelControlID="btnCancel" BackgroundCssClass="popupbackground"></ajaxToolkit:ModalPopupExtender>
+                <ajaxToolkit:ModalPopupExtender ID="addBacklogPopup" runat="server" TargetControlID="addBacklogHiddenField" PopupControlID="addBacklogPanel" CancelControlID="btnCancelAdd" BackgroundCssClass="popupbackground"></ajaxToolkit:ModalPopupExtender>
                 <asp:HiddenField ID="addBacklogHiddenField" runat="server" />
                 <asp:Panel ID="addBacklogPanel" runat="server" CssClass="popupmodal">
                     <fieldset>
@@ -82,7 +63,7 @@
                                 <tr>
                                     <td>
                                         <p><label>Title</label><br />
-                                        <asp:TextBox ID="titleTextBox" runat="server" Columns="38"></asp:TextBox></p>
+                                        <asp:TextBox ID="titleTextBox" runat="server" Columns="40"></asp:TextBox></p>
                                         <p><label>Description</label><br />
                                         <asp:TextBox ID="descriptionTextBox" runat="server" TextMode="MultiLine" Columns="40" Rows="12"></asp:TextBox></p>
                                     </td>
@@ -99,26 +80,45 @@
                                         <asp:DropDownList runat="server" ID="assigneeDropDownList" Width="160"></asp:DropDownList></p>
                                         <label>Color</label><br />
                                         <asp:DropDownList runat="server" ID="colorDropDownList" Width="160">
-                                            <asp:ListItem Text="Yellow" Value="yellow"></asp:ListItem>
-                                            <asp:ListItem Text="Red" Value="red"></asp:ListItem>
-                                            <asp:ListItem Text="Orange" Value="orange"></asp:ListItem>
-                                            <asp:ListItem Text="Green" Value="green"></asp:ListItem>
-                                            <asp:ListItem Text="Blue" Value="blue"></asp:ListItem>
+                                            <asp:ListItem Text="Yellow" Value="#ffff4b,#ffff95"></asp:ListItem>
+                                            <asp:ListItem Text="Red" Value="#ff4b4b,#ff9898"></asp:ListItem>
+                                            <asp:ListItem Text="Purple" Value="#b64bff,#d598ff"></asp:ListItem>
+                                            <asp:ListItem Text="Orange" Value="#ffa500,#ffc864"></asp:ListItem>
+                                            <asp:ListItem Text="Green" Value="#4bff4b,#98ff98"></asp:ListItem>
+                                            <asp:ListItem Text="Cyan" Value="#80ffff,#caffff"></asp:ListItem>
+                                            <asp:ListItem Text="Blue" Value="#6464ff,#adadff"></asp:ListItem>
                                         </asp:DropDownList>
                                         <p><label>Complexity</label><br />
                                         <asp:TextBox ID="complexityTextBox" runat="server" TextMode="Number" Width="160"></asp:TextBox></p>
                                         <label>Deadline (month/day/year)</label><br />
                                         <asp:TextBox ID="deadlineTextBox" runat="server" TextMode="Date" Width="160"></asp:TextBox>
+                                        <ajax:CalendarExtender ID="deadlineCalendarExtender" runat="server" TargetControlID="deadlineTextBox" Format="MM/dd/yyyy" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <asp:Button ID="btnAddBacklog" runat="server" Text="Add" OnClick="btnAddBacklog_Click" />&nbsp;or&nbsp;
-                                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+                                        <asp:Button ID="btnAddBacklog" runat="server" Text="Add" OnClick="btnAddBacklog_Click" OnClientClick="refreshBoard()" />&nbsp;or&nbsp;
+                                        <asp:Button ID="btnCancelAdd" runat="server" Text="Cancel" />
+                                        <asp:Button runat="server" ClientIDMode="Static" ID="btnRefresh" />
+                                        <script>
+                                            function refreshBoard() {
+                                                setTimeout(function () { document.getElementById('btnRefresh').click(); }, 1000);
+                                            }
+                                        </script>
                                     </td>
                                 </tr>
                             </table>
                         </div>          
+                    </fieldset>
+                </asp:Panel>
+
+                <ajaxToolkit:ModalPopupExtender ID="viewBacklogPopup" runat="server" TargetControlID="viewBacklogHiddenField" PopupControlID="viewBacklogPanel" CancelControlID="btnCancelView" BackgroundCssClass="popupbackground"></ajaxToolkit:ModalPopupExtender>
+                <asp:HiddenField ID="viewBacklogHiddenField" runat="server" />
+                <asp:Panel ID="viewBacklogPanel" runat="server" CssClass="popupmodal">
+                    <fieldset>
+                        <legend>Backlog ID #<asp:Label ID="backlogIDview" runat="server" Text=""></asp:Label></legend>
+                        <asp:Literal ID="viewBacklog" runat="server"></asp:Literal>
+                        <asp:Button ID="btnEditView" runat="server" Text="Edit" />&nbsp;or&nbsp;<asp:Button ID="btnCancelView" runat="server" Text="Cancel" />
                     </fieldset>
                 </asp:Panel>
             </ContentTemplate>
